@@ -1,0 +1,62 @@
+@base-color: #1654ff;
+
+.button {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @base-color; // Синий цвет
+
+    p {
+        font-size: 24px;
+        vertical-align: middle;
+        color: spin(@base-color, 180);
+        // Цвет разворачивается на 180 градусов, а значит текст относительно контейнера всегда будет комплиментарным и контрастным
+    }
+}
+
+@base-color: rgb(110, 27, 255);
+
+.btn {
+    &-primary {
+        //аперсанд добавляет родительский тэг btn
+
+        background-color: @base-color;
+        //Получается <btn-primary: "Параметры @base-color">
+
+        &-hover,
+        &:hover {
+            //аперсанд добавляет ссылку вложенных родительских стилей
+
+            background-color: lighten(@base-color, 20%);
+            //Получается <btn-primary-hover: background-color: lighten(@base-color, 20%);>
+            //Получается <btn-primary:hover: background-color: lighten(@base-color, 20%);>
+        }
+
+        // Свойства закрыты скобками поэтому, аперсанд от hover группы не распространяется до нижней группы pressed, active
+
+        &-pressed,
+        &:active {
+            background-color: darken(@base-color, 20%);
+            //Получается <btn-primary-pressed: darken(@base-color, 20%);>
+            //Получается <btn-primary:active: darken(@base-color, 20%);>
+        }
+    }
+}
+
+
+
+.btn-primary {
+    background-color: #6e1bff;
+}
+
+.btn-primary-hover,
+.btn-primary:hover {
+    background-color: #af81ff;
+}
+
+.btn-primary-pressed,
+.btn-primary:active {
+    background-color: #4200b4;
+}

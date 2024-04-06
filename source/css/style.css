@@ -1,0 +1,35 @@
+.button {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e1bff;
+}
+.button p {
+  font-size: 24px;
+  vertical-align: middle;
+  color: #acff1b;
+}
+.btn-primary {
+  background-color: #6e1bff;
+}
+.btn-primary-hover,
+.btn-primary:hover {
+  background-color: #af81ff;
+}
+.btn-primary-pressed,
+.btn-primary:active {
+  background-color: #4200b4;
+}
+.btn-primary {
+  background-color: #6e1bff;
+}
+.btn-primary-hover,
+.btn-primary:hover {
+  background-color: #af81ff;
+}
+.btn-primary-pressed,
+.btn-primary:active {
+  background-color: #4200b4;
+}
